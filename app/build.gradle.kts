@@ -16,6 +16,9 @@ android {
     buildTypes {
         release {
             resValue("string", "app_name", "@string/app_name_release")
+            // use debug signing so the release-variant APK is installable for testing;
+            // release variant keeps the non-debug plugin manifest (correct intent action)
+            signingConfig = signingConfigs.getByName("debug")
         }
         debug {
             resValue("string", "app_name", "@string/app_name_debug")
