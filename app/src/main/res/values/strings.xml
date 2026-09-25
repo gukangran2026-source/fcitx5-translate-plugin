@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name_debug">Fcitx5 Translate Plugin (Debug)</string>
+    <string name="app_name_release">Fcitx5 Translate Plugin</string>
+    <string name="description">Offline bidirectional translation models (bergamot) for fcitx5-android</string>
+</resources>

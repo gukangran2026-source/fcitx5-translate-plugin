@@ -1,0 +1,4 @@
+# bergamot model direction manifest
+# format: <direction> <model> <vocab files...>
+enzh model.enzh.intgemm.alphas.bin.gz srcvocab.enzh.spm.gz trgvocab.enzh.spm.gz lex.50.50.enzh.s2t.bin.gz
+zhen model.zhen.intgemm.alphas.bin.gz vocab.zhen.spm.gz lex.50.50.zhen.s2t.bin.gz
