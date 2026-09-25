@@ -25,13 +25,15 @@ jobs:
           yes | "$SDKM" --licenses > /dev/null || true
           "$SDKM" --install "platforms;android-35" "platforms;android-36" "build-tools;35.0.0"
 
-      - name: Build release APK
+      - name: Build APKs
         run: |
           chmod +x gradlew
-          ./gradlew :app:assembleRelease --no-daemon --stacktrace
+          ./gradlew :app:assembleRelease :app:assembleDebug --no-daemon --stacktrace
 
-      - name: Upload APK
+      - name: Upload APKs
         uses: actions/upload-artifact@v4
         with:
           name: plugin-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: |
+            app/build/outputs/apk/release/*.apk
+            app/build/outputs/apk/debug/*.apk
